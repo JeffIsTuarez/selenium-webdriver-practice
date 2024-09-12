@@ -8,11 +8,7 @@ Given('I am on the Google search page', async function() {
 });
 
 When('I search for {string}', async function(word) {
-    
-    // let executor = driver.executScript;
-    // executor("arguments[0].click();", element);
     let searchBar = await this.driver.findElement(By.name('q'));
-
     await searchBar.sendKeys(word);
     await searchBar.submit();
 });
